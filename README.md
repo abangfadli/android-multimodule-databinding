@@ -3,6 +3,7 @@ POC of build error for multimodule databinding android with parallel execution
 
 Graph:
 app depends on lib1, lib2, commonlib
+
 lib1, lib2 depend on -> commonlib
 
 Clean build first to ensure there's no cache for databinding generated files.
