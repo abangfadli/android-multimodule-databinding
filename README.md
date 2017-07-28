@@ -2,9 +2,8 @@
 POC of build error for multimodule databinding android with parallel execution
 
 Graph:
-app -> commonLib
-    -> lib1 -> commonLib
-    -> lib2 -> commonLib
+app depends on lib1, lib2, commonlib
+lib1, lib2 depend on -> commonlib
 
 Clean build first to ensure there's no cache for databinding generated files.
 Try to build with max-workers = 4, parallel = true.
